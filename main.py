@@ -4,12 +4,6 @@ import sys
 def process_match_results(lines):
     """
     Process the match results and calculate points for each team.
-
-    Parameters:
-    lines (list): A list of match results in string format (e.g., "Lions 3, Snakes 3")
-
-    Returns:
-    dict: A dictionary with team names as keys and their respective points as values.
     """
     scores = {}  # Dictionary to store team scores
 
@@ -62,12 +56,6 @@ def process_match_results(lines):
 def rank_teams(scores):
     """
     Sort the teams based on points and alphabetical order in case of a tie.
-
-    Parameters:
-    scores (dict): Dictionary with team names as keys and points as values.
-
-    Returns:
-    list: A sorted list of tuples (team name, points).
     """
     return sorted(
         scores.items(), key=lambda x: (-x[1], x[0])
@@ -77,12 +65,6 @@ def rank_teams(scores):
 def format_output(ranked_teams):
     """
     Format the ranking table as required.
-
-    Parameters:
-    ranked_teams (list): Sorted list of (team name, points).
-
-    Returns:
-    str: A formatted string of the ranking table.
     """
     output = []  # List to store the formatted ranking lines
     rank = 0  # Track current rank
